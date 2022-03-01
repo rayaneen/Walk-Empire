@@ -4,7 +4,7 @@ class CreateActivities < ActiveRecord::Migration[6.1]
       t.string :statut
       t.float :steps
       t.references :user, null: false, foreign_key: true
-      t.references :controlpoint, null: false, foreign_key: true
+      t.references :control_point, null: false, foreign_key: true
 
       t.timestamps
     end
