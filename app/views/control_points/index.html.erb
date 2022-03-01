@@ -1,2 +1,9 @@
-<h1>ControlPoints#index</h1>
-<p>Find me in app/views/control_points/index.html.erb</p>
+<h1>ControlPoints</h1>
+<p> Si aucun marqueur s'affiche il faut creer des objets control_points, TODO: Seed</p>
+<div class="container">
+<p><%= @control_points.first.name%>
+  <div id="map" class="vh-100" data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
