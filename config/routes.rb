@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'control_points/index'
-  get 'control_points/show'
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users, only: [:edit, :update ] do
+    resources :activities, only: [:new, :create]
+  end
+  # Pas de routes control points pour l'instant
+  # Pas sur pour ça mais dans l'idée, l'user ne peut pas y toucher donc pas besoin?
 end
