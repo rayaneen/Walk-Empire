@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'control_points#index'
+  resources :control_points, only: [:index, :show]
   resources :users, only: [:edit, :update ] do
     resources :activities, only: [:new, :create]
   end
-  resources :control_points, only: [:index, :show]
 end
