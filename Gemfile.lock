@@ -98,6 +98,7 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
+    geocoder (1.7.3)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -120,7 +121,11 @@ GEM
     minitest (5.15.0)
     msgpack (1.4.5)
     nio4r (2.5.8)
+<<<<<<< HEAD
     nokogiri (1.13.3-x86_64-darwin)
+=======
+    nokogiri (1.13.3-arm64-darwin)
+>>>>>>> d15ce4d630bf2cf3bc1d30d8d1b6d6ab24ac7288
       racc (~> 1.4)
     nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
@@ -240,6 +245,10 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+<<<<<<< HEAD
+=======
+  arm64-darwin-21
+>>>>>>> d15ce4d630bf2cf3bc1d30d8d1b6d6ab24ac7288
   x86_64-linux
 
 DEPENDENCIES
@@ -250,6 +259,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
+  geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
