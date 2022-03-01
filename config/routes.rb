@@ -4,6 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update ] do
     resources :activities, only: [:new, :create]
   end
-  # Pas de routes control points pour l'instant
-  # Pas sur pour ça mais dans l'idée, l'user ne peut pas y toucher donc pas besoin?
+  resources :control_points, only: [:index, :show]
 end
