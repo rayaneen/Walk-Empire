@@ -5,7 +5,7 @@ class ControlPointsController < ApplicationController
       {
         lat: control_point.latitude,
         lng: control_point.longitude,
-        show: render_to_string(partial: "show", locals: { control_point: control_point })
+        id: control_point.id
       }
     end
   end

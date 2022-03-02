@@ -20,10 +20,14 @@ export default class extends Controller {
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.show)
       new mapboxgl.Marker()
+      const el = document.createElement("div");
+      el.setAttribute('data-controller', 'marker');
+      el.setAttribute('data-marker-id-value', marker.id);
+      el.setAttribute('data-action', 'click->marker#revealinfos')
+      el.className = 'marker';
+      new mapboxgl.Marker(el)
         .setLngLat([marker.lng, marker.lat])
-        .setPopup(popup)
         .addTo(this.map)
     });
   }
