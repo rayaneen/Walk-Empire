@@ -15,7 +15,7 @@ puts "Done!"
 puts "Creating Jardin Public Control Point"
 
 ControlPoint.create!(name: "Jardin Public", status:"Capturé", difficulty:"100m",
-                     latitude: 44.85993992280524, longitude: -0.5658384933716525, user_id: 1)
+                     latitude: 44.848207, longitude: -0.578130, user_id: 1)
 puts "Done!"
 puts "Creating Jardin Public Control Point"
 
