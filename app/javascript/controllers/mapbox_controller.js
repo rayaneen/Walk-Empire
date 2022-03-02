@@ -24,7 +24,7 @@ export default class extends Controller {
       const el = document.createElement("div");
       el.setAttribute('data-controller', 'marker');
       el.setAttribute('data-marker-id-value', marker.id);
-      el.setAttribute('data-action', 'click->marker#revealinfos')
+      el.setAttribute('data-action', 'click->marker#broadcastEvent')
       el.className = 'marker';
       new mapboxgl.Marker(el)
         .setLngLat([marker.lng, marker.lat])
