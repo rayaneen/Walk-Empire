@@ -1,0 +1,13 @@
+.infos {
+  height: 0px;
+  width: 100%;
+  position: relative;
+  bottom: 50vh;
+}
+
+.infos.opened {
+  transition: height 1.6s 0s linear;
+  height: 50vh;
+  background-color: blueviolet;
+
+}
