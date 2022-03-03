@@ -23,6 +23,9 @@ puts "Creating 20 users"
   user.save!
   puts "#{user.nickname} with #{user.xp} xp points created!"
 end
+puts "Creating El Rayano"
+User.create!(email: "user1@gmail.com", password:"secret", nickname: "El Rayano", xp: 1000)
+
 puts "Finished creating users!"
 
 puts "Creating Le Wagon Control Point"

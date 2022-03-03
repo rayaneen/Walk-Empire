@@ -1,5 +1,6 @@
 class ControlPointsController < ApplicationController
   def index
+    @user = current_user
     @control_points = ControlPoint.all
     @markers = @control_points.map do |control_point|
       {
