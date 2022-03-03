@@ -19,10 +19,10 @@ export default class extends Controller {
       positionOptions: {enableHighAccuracy: true},
       trackUserLocation: true
       });
-      this.map.addControl(geolocate);
-      this.map.on('load', () => {
-      geolocate.trigger();
-      });
+    this.map.addControl(geolocate);
+    this.map.on('load', () => {
+    geolocate.trigger();
+    });
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }

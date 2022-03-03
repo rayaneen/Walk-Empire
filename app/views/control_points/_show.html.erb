@@ -1,6 +1,6 @@
 <h2> <%= control_point.name%></h2>
 <div>
-  <p><strong><%= control_point.user.email%> (lvl <%=control_point.user.xp %></strong> is controling this territory </p>
-  <p> You need to walk <%= control_point.difficulty%> to conquer it </p>
-
+  <p><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
+  <p> You need to walk <%= control_point.difficulty%> before pretending to claim it </p>
+  <button type="button" class="btn btn-danger" style="color: white;">GET STRONGER</button>
 </div>
