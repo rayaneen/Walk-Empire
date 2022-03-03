@@ -15,7 +15,7 @@ module WALKEmpire
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-
+    config.hosts << "5a48-86-213-13-124.ngrok.io"
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
