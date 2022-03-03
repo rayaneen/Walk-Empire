@@ -12,8 +12,17 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/dark-v10"
+      style: "mapbox://styles/mapbox/dark-v10",
+      zoom: 30
     })
+    const geolocate = new mapboxgl.GeolocateControl({
+      positionOptions: {enableHighAccuracy: true},
+      trackUserLocation: true
+      });
+    this.map.addControl(geolocate);
+    this.map.on('load', () => {
+    geolocate.trigger();
+    });
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }
@@ -24,7 +33,7 @@ export default class extends Controller {
       const el = document.createElement("div");
       el.setAttribute('data-controller', 'marker');
       el.setAttribute('data-marker-id-value', marker.id);
-      el.setAttribute('data-action', 'click->marker#revealinfos')
+      el.setAttribute('data-action', 'click->marker#broadcastEvent')
       el.className = 'marker';
       new mapboxgl.Marker(el)
         .setLngLat([marker.lng, marker.lat])

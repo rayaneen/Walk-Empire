@@ -1,5 +1,6 @@
 class ControlPointsController < ApplicationController
   def index
+    @user = current_user
     @control_points = ControlPoint.all
     @markers = @control_points.map do |control_point|
       {
@@ -12,5 +13,6 @@ class ControlPointsController < ApplicationController
 
   def show
     @control_point = ControlPoint.find(params[:id])
+    render partial: 'control_points/show', locals: { control_point: @control_point }, formats: [:html]
   end
 end

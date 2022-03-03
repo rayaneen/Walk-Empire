@@ -1,10 +1,19 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static values = {
+    static targets = ["info"]
+    static values = {
     id: String,
   }
-  revealinfos() {
-    console.log(`Hola que tal ${this.idValue}`)
+  broadcastEvent() {
+    const event = new CustomEvent('marker-clicked',  {
+      detail: {
+        id: this.idValue
+      }
+    });
+
+    window.dispatchEvent(event);
+
   }
+
 }
