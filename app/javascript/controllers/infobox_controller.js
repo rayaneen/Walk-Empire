@@ -4,12 +4,16 @@ export default class extends Controller {
   static targets = ["infos"]
 
   revealInfos(event) {
-    console.log(event.detail.id)
     const url = `control_points/${event.detail.id}`
     fetch(url)
       .then(response => response.text()
       .then(this.displayData)
       )
+  }
+
+  hiddenData = () => {
+    this.infosTarget.innerHTML = '';
+    this.infosTarget.classList.remove('opened')
   }
   displayData = (data) => {
     this.infosTarget.innerHTML = data;
