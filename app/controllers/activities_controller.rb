@@ -5,10 +5,10 @@ class ActivitiesController < ApplicationController
 
   def create
     @user = current_user
-    @control_point = ControlPoint.find(params[:id])
-    @activity = Activity.new()
+    @control_point = ControlPoint.find(params[:control_point_id])
+    @activity = Activity.new(user_id: @user.id, control_point_id: @control_point.id)
     if @activity.save
-      render 'activity_km'
+      redirect_to user_activity_path(@user, @activity)
     else
       raise
     end
