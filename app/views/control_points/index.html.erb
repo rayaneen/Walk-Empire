@@ -1,7 +1,16 @@
+
 <%# <img src="https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png" class="shine" id="logoem"> %>
 <%# <div class="container"> %>
   <div id="map" class="vh-100" data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+ <div data-controller="infobox" data-action="marker-clicked@window->infobox#revealInfos" >
+    <div class="position-relative">
+      <div id="map" class="vh-100" data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+          data-action='click->infobox#hiddenData'>
+      </div>
+    <div class="infos" data-infobox-target="infos"></div>
   </div>
 </div>
