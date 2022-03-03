@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'control_points#index'
   resources :control_points, only: [:index, :show]
   resources :users, only: [:edit, :update ] do
-    resources :activities, only: [:new, :create]
+    resources :activities, only: [:new, :create, :show]
   end
 end
