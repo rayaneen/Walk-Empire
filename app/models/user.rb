@@ -6,7 +6,12 @@ class User < ApplicationRecord
   has_many :control_points
   has_many :activities, dependent: :destroy
 
-  def has_an_activity_going_on?(control_point)
-    activities.where(status: nil).where(control_point: control_point).any?
+  def current_activity(control_point)
+    activity = activities.where(status: nil).where(control_point: control_point).last
+    if activity
+      activity
+    else
+      false
+    end
   end
 end
