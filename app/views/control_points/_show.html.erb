@@ -1,6 +1,11 @@
-<h2> <%= control_point.name%></h2>
 <div data-controller="create-activity">
-  <p><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
-  <p> You need to walk <%= control_point.difficulty%> before pretending to claim it </p>
-  <%= link_to "START WALKING BITCH", user_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-danger"%>
-</div>
+  <div class="imageinfo">
+    <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo"%>
+  </div>
+  <h5 class="card-titleinfo"><%= control_point.name%></h5>
+  <div class="cardinfo" style="width: 75%;">
+      <p class="card-textinfo"><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
+      <p class="card-textinfo">You need to walk <%= control_point.difficulty%> before pretending to claim it </p>
+      <%= link_to "START CAPTURE", user_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-info2"%>
+    </div>
+  <div>
