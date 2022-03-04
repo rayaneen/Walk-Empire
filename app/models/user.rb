@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :activities
 
   def has_an_activity_going_on?(control_point)
-    activities.where(statut: nil).where(control_point: control_point).any?
+    activities.where(status: nil).where(control_point: control_point).any?
   end
 end

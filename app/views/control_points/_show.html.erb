@@ -4,5 +4,7 @@
   <p> You need to walk <%= control_point.difficulty%> before pretending to claim it </p>
   <% unless current_user.has_an_activity_going_on?(control_point)%>
     <%= link_to "START WALKING BITCH", control_point_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-danger"%>
+  <% else %>
+    <%= link_to "Cancel conquest", control_point_activities_path(current_user, control_point_id: control_point.id), class: "btn btn-light", method:"destroy"%>
   <% end %>
 </div>
