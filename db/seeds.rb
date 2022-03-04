@@ -48,3 +48,40 @@ puts "Creating CAPC musée d'art contemporain de Bordeaux"
 ControlPoint.create!(name: "CAPC musée d'art contemporain de Bordeaux", status:"Capturé", difficulty:"#{rand(1..1000)}m",
                      latitude: 44.848627741310736, longitude: -0.5720502867787579, user_id: rand(User.first.id..User.last.id))
 puts "Done!"
+
+
+puts "Creating Grand-Théâtre"
+ControlPoint.create!(name: "Grand-Théâtre", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.84286968425403,  longitude: -0.5742652278749897, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+puts "Creating Place Gambetta"
+ControlPoint.create!(name: "Place Gambetta", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.841251685226, longitude: -0.5806207513990014, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+puts "Creating Place Saint Pierre"
+ControlPoint.create!(name: "Saint Pierre", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.83988265214394, longitude: -0.5702004972994618, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+puts "Creating Place Porte Cailhau"
+ControlPoint.create!(name: "Porte Cailhau", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.83883379977185, longitude: -0.5684846878498125, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+puts "Creating Place Grosse Cloche"
+ControlPoint.create!(name: "Grosse Cloche", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.835640992057314,  longitude: -0.5714149119064934, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+puts "Creating La Victoire"
+ControlPoint.create!(name: "La Victoire", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.831253999069254,  longitude:  -0.5727863993101522, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+
+puts "Creating Halle des Chartrons"
+ControlPoint.create!(name: "Halle des Chartrons", status:"Capturé", difficulty:"#{rand(1..1000)}m",
+                     latitude: 44.852854276346584,  longitude: -0.5722793444069948, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
