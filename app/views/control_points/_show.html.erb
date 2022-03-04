@@ -1,14 +1,6 @@
-
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-        Target that will display card</button>
-
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel"><%= control_point.name %></h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body small">
-  Control points Details
-  </div>
+<h2> <%= control_point.name%></h2>
+<div data-controller="create-activity">
+  <p><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
+  <p> You need to walk <%= control_point.difficulty%> before pretending to claim it </p>
+  <%= link_to "START WALKING BITCH", user_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-danger"%>
 </div>
