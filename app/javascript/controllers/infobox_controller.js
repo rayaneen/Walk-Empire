@@ -4,7 +4,8 @@ export default class extends Controller {
   static targets = ["infos"]
 
   revealInfos(event) {
-    const url = `control_points/${event.detail.id}`
+    const baseUrl = window.location.origin
+    const url = `${baseUrl}/control_points/${event.detail.id}`
     fetch(url)
       .then(response => response.text()
       .then(this.displayData)
