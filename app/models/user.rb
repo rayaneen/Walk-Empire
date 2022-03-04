@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :control_points
-  has_many :activities
+  has_many :activities, dependent: :destroy
 
   def has_an_activity_going_on?(control_point)
     activities.where(status: nil).where(control_point: control_point).any?
