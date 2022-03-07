@@ -1,4 +1,6 @@
 .container-fluidpd {
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s;
   display: list-item;
   padding: 0;
   background-color: #284EAE;
@@ -35,6 +37,22 @@
         border: 3px #0B75E8 solid;
       }
     }
+  }
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
   }
 }
 .ulpd {

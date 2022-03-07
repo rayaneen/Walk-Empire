@@ -6,4 +6,7 @@ export default class extends Controller {
   showProfil() {
     this.showProfilTarget.classList = ""
   }
+  hideProfil() {
+    this.hideProfilTarget.classlist = "close"
+  }
 }
