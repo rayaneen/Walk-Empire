@@ -1,4 +1,7 @@
-<div data-controller="update-activity">
+<div data-controller="update-activity"
+     data-update-activity-itinary-value="<%= @activity.itinary.is_a?(Array) ? @activity.itinary : [] %>"
+     data-update-activity-distance-value="<%=@activity.distance%>"
+     >
   <div data-controller="infobox" data-action="marker-clicked@window->infobox#revealInfos" >
       <div class="position-relative">
         <div id="map" class="vh-100" data-controller="mapbox"
@@ -15,9 +18,10 @@
                         update_activity_target: 'form',
                         action: 'submit->update_activity#update'
                         },
-                      html: { class: '' } do |f| %>
+                      html: { class: 'd-none' } do |f| %>
   <%= f.input :itinary %>
   <%= f.input :distance %>
+  <%= f.input :status , default: 'Pending'%>
   <%= f.button :submit %>
   <% end %>
 </div>
