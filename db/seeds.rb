@@ -24,8 +24,8 @@ puts "Creating 20 users"
   puts "#{user.nickname} with #{user.xp} xp points created!"
 end
 
-puts "Creating El Rayano"
-User.create!(email: "user1@gmail.com", password:"secret", nickname: "El Rayano", xp: 1000)
+puts "Creating Admin"
+User.create!(email: "user1@gmail.com", password:"secret", nickname: "No one", xp: 0)
 
 puts "Finished creating users!"
 
@@ -83,12 +83,12 @@ puts "Done!"
 
 puts "Creating Halle des Chartrons"
 ControlPoint.create!(name: "Halle des Chartrons", status:"Capturé", difficulty: rand(1..1000),
-                     latitude: 44.852854276346584,  longitude: -0.5722793444069948, user_id: rand(User.first.id..User.last.id))
+                     latitude: 44.852854276346584,  longitude: -0.5722793444069948, user: User.all.sample)
 puts "Done!"
 
 puts "Creating Piscine du Grand Parc"
 ControlPoint.create!(name: "Piscine du Grand Parc", status:"Unclaimed", difficulty: rand(1..1000),
-                     latitude: 44.857953257960425,  longitude:  -0.579733584769508, user_id: rand(User.first.id..User.last.id))
+                     latitude: 44.857953257960425,  longitude:  -0.579733584769508, user: User.find_by_nickname("No one"))
 puts "Done!"
 
 puts "Seed is finito"
