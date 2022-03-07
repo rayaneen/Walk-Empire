@@ -10,28 +10,32 @@
   font-family: "SF Pro Display", sans-serif;
   transition: height 1.6s 0s linear;
   height: 50vh;
-  border-radius: 50px;
-  background-color: #284EAE;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #284EAEED;
   background-image: url("https://i.postimg.cc/tCbdbqCt/stars.png");
   background-size: contain;
   position: absolute;
-  bottom: 15%;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  border: 1px solid #ffffff47;
   #imginfo {
-    width: 90px;
-    height: 90px;
+    border: 2px #ffffff61 solid;
     border-radius: 50%;
+    display: block;
+    height: 90px;
+    margin: 8px auto;
     top: 20%;
-    left: 42%;
-    border: 3px #0B75E8 solid;
-    position: relative;
+    width: 90px;
   }
   .cardinfo {
-    background-color: white;
+    background-color: #a6d6f22e;
     border-radius: 25px;
-    position: sticky;
-    left: 12%;
     height: 29vh;
-    bottom: 18%;
+    display: block;
+    border: 1px solid #ffffff47;
+    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    width: 75%;
   }
   .card-titleinfo {
     font-weight: bold;
@@ -39,20 +43,27 @@
     text-align: center;
   }
   .card-textinfo {
-    padding: 10px;
+    padding: 20px 24px 12px 20px;
+    color: white;
   }
   .btn-info2 {
-    position: sticky;
-    left: 30%;
     font-weight: bold;
     background-color: #446fda;
+    display: block;
+    margin: 0 auto;
     border-color: #446fda;
+    width: 54%;
     border-radius: 7px;
+    max-width: fit-content;
+    color: #f4f4f4;
+    border: 1px solid #ffffff54;
+    opacity: 0.9;
   }
   .btn-info2:hover {
-    background-color: red;
+    background-color: #3f6ad7;
     color: white;
-    border: 2px rgb(19, 18, 18) solid;
-    transition: 1.5s;
+    border: 1px solid #ffffff7f;
+    transition: .5s ease;
+    opacity: 1;
   }
 }
