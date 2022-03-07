@@ -85,3 +85,10 @@ puts "Creating Halle des Chartrons"
 ControlPoint.create!(name: "Halle des Chartrons", status:"Capturé", difficulty: rand(1..1000),
                      latitude: 44.852854276346584,  longitude: -0.5722793444069948, user_id: rand(User.first.id..User.last.id))
 puts "Done!"
+
+puts "Creating Piscine du Grand Parc"
+ControlPoint.create!(name: "Piscine du Grand Parc", status:"Unclaimed", difficulty: rand(1..1000),
+                     latitude: 44.857953257960425,  longitude:  -0.579733584769508, user_id: rand(User.first.id..User.last.id))
+puts "Done!"
+
+puts "Seed is finito"
