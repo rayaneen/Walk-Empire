@@ -19,7 +19,7 @@ class ControlPointsController < ApplicationController
   end
 
   def update
-    @control_point = ControlPoint.find(params[:id])
+    @control_point = ControlPoint.find(params[:control_point_id])
     @activity = Activity.find_by(user_id: current_user.id)
     if @activity.distance >= @control_point.difficulty
       @control_point.user_id = current_user.id
@@ -27,6 +27,6 @@ class ControlPointsController < ApplicationController
     else
       raise
     end
-    render partial: 'control_points/show', locals: { control_point: @control_point, activity: @activity }, format: [:html]
+    redirect_to root_path
   end
 end
