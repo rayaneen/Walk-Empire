@@ -37,6 +37,16 @@ export default class extends Controller {
       el.setAttribute('data-marker-id-value', marker.id);
       el.setAttribute('data-action', 'click->marker#broadcastEvent')
       el.className = 'marker';
+      if (marker.user_id == marker.control_point_user_id) {
+        el.classList.add("owned")
+        el.classList.remove("unowned")
+      } else if (marker.control_point_user_id) {
+        el.classList.add("unowned")
+        el.classList.remove("owned")
+      } else {
+        el.classList.remove("unowed")
+        el.classList.remove("owned")
+      }
       new mapboxgl.Marker(el)
         .setLngLat([marker.lng, marker.lat])
         .addTo(this.map)
