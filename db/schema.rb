@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_03_07_104224) do
 
   # These are extensions that must be enabled in order to support this database
@@ -21,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_03_07_104224) do
     t.bigint "control_point_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "itinary", default: [], array: true
+    t.text "itinary", default: "{}"
     t.integer "distance", default: 0
     t.index ["control_point_id"], name: "index_activities_on_control_point_id"
     t.index ["user_id"], name: "index_activities_on_user_id"

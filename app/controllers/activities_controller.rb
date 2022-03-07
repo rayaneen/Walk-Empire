@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    @activity = Activity.find(params[:id])
     @user = current_user
     @control_point = ControlPoint.find(params[:control_point_id])
     @markers =
@@ -29,7 +30,21 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-
     redirect_to root_path
+  end
+
+  def update
+    puts "$$$$$$$$$$$$$$$"
+    @activity = Activity.find(params[:id])
+    @activity.update(activity_params)
+    render json: @activity
+  end
+
+  private
+
+  def activity_params
+    puts "================="
+    puts params
+    params.require(:activity).permit(:distance, :itinary, :status)
   end
 end
