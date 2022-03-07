@@ -28,6 +28,22 @@
     </div>
   </div>
   <div class="close", data-navbar-target="showProfil">
-    <%= render "pages/profil"%>
+    <div class="container-fluidpd">
+    <% if current_user != nil %>
+    <div class="cardpd" style="width: 100%;">
+      <div class="imagepd">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/BenSeb33", id:"avatarpd"%>
+      </div>
+      <h5 class="card-titlepd"><%= current_user.email  %></h5>
+      <div class="card-bodypd">
+      <p class="card-textpd">XP :9000 points</p>
+      <p class="card-textpd">Total walk :3 kilometers</p>
+      <ul class="ulpd">
+        <a href="/" class="btn btn-info">close</a>
+      </ul>
+      </div>
+    </div>
+    <% end %>
+    </div>
   </div>
 </div>
