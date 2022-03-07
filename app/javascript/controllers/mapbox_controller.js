@@ -24,7 +24,6 @@ export default class extends Controller {
     this.map.on('load', () => {
     geolocate.trigger();
     });
-
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }
@@ -40,11 +39,11 @@ export default class extends Controller {
       if (marker.user_id == marker.control_point_user_id) {
         el.classList.add("owned")
         el.classList.remove("unowned")
-      } else if (marker.control_point_user_id) {
-        el.classList.add("unowned")
+      } else if (marker.admin == true) {
+        el.classList.remove("unowed")
         el.classList.remove("owned")
       } else {
-        el.classList.remove("unowed")
+        el.classList.add("unowned")
         el.classList.remove("owned")
       }
       new mapboxgl.Marker(el)

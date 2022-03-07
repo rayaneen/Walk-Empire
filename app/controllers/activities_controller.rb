@@ -11,8 +11,12 @@ class ActivitiesController < ApplicationController
       [{
         lat: @control_point.latitude,
         lng: @control_point.longitude,
-        id: @control_point.id
-      }]
+        id: @control_point.id,
+        user_id: current_user.id,
+        control_point_user_id: @control_point.user_id,
+        admin: @control_point.admin?
+      }
+      ]
   end
 
   def create

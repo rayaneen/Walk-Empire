@@ -1,5 +1,5 @@
 class ControlPointsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+
   def index
     @user = current_user
     @control_points = ControlPoint.all
@@ -9,7 +9,8 @@ class ControlPointsController < ApplicationController
         lng: control_point.longitude,
         id: control_point.id,
         user_id: current_user.id,
-        control_point_user_id: control_point.user_id
+        control_point_user_id: control_point.user_id,
+        admin: control_point.admin?
       }
     end
   end
@@ -31,4 +32,5 @@ class ControlPointsController < ApplicationController
     end
     redirect_to root_path
   end
+
 end
