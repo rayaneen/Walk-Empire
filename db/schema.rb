@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_04_134748) do
+
+ActiveRecord::Schema.define(version: 2022_03_07_104224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_03_04_134748) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "itinary", default: "{}"
-    t.integer "distance"
+    t.integer "distance", default: 0
     t.index ["control_point_id"], name: "index_activities_on_control_point_id"
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
@@ -32,11 +33,11 @@ ActiveRecord::Schema.define(version: 2022_03_04_134748) do
     t.float "latitude"
     t.float "longitude"
     t.string "status"
-    t.string "difficulty"
     t.date "capture_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.integer "difficulty"
     t.index ["user_id"], name: "index_control_points_on_user_id"
   end
 
