@@ -25,7 +25,7 @@ class ControlPointsController < ApplicationController
       @control_point.user_id = current_user.id
       @control_point.save
     else
-      raise
+      redirect_to root_path
     end
     redirect_to root_path
   end
