@@ -2,5 +2,5 @@
 <div data-controller="create-activity">
   <p><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
   <p> You need to walk <%= control_point.difficulty%> before pretending to claim it </p>
-  <%= link_to "START WALKING BITCH", user_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-danger"%>
+  <%= link_to "START WALKING BITCH", control_point_activities_path(control_point), method: "POST", class:"btn btn-danger"%>
 </div>

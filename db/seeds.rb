@@ -8,9 +8,9 @@
 require 'faker'
 
 puts "Cleaning DB"
+Activity.destroy_all
 ControlPoint.destroy_all
 User.destroy_all
-Activity.destroy_all
 
 puts "Creating 20 users"
 20.times do
