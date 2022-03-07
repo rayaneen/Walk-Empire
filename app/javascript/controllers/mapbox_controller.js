@@ -24,6 +24,7 @@ export default class extends Controller {
     this.map.on('load', () => {
     geolocate.trigger();
     });
+
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }

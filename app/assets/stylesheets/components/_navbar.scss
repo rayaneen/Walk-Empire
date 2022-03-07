@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2px 10px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,4 +16,24 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: rgba(255,255,255,0.55);
+}
+
+
+
+// .dropup, .dropend, .dropdown, .dropstart {
+//     display: block!important;
+//     margin-right: 0!important;
+//     margin-left: auto!important;
+// }
+
+
+@media (min-width: 206px) {
+.navbar-expand-sm .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+}
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute!important;
 }

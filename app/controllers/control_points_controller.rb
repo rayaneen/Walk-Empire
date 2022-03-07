@@ -1,4 +1,5 @@
 class ControlPointsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   def index
     @user = current_user
     @control_points = ControlPoint.all
@@ -13,6 +14,7 @@ class ControlPointsController < ApplicationController
 
   def show
     @control_point = ControlPoint.find(params[:id])
-    render partial: 'control_points/show', locals: { control_point: @control_point }, formats: [:html]
+    @activity = current_user.current_activity(@control_point)
+    render partial: 'control_points/show', locals: { control_point: @control_point, activity: @activity }, formats: [:html]
   end
 end

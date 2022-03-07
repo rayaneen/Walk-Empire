@@ -4,4 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :control_points
+  has_many :activities, dependent: :destroy
+
+  def current_activity(control_point)
+    activity = activities.where(status: nil).where(control_point: control_point).last
+    if activity
+      activity
+    else
+      false
+    end
+  end
 end

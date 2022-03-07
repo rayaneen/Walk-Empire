@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_03_04_134748) do
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "statut"
+    t.string "status"
     t.bigint "user_id", null: false
     t.bigint "control_point_id", null: false
     t.datetime "created_at", precision: 6, null: false
