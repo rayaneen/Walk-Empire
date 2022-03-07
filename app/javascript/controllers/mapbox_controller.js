@@ -17,7 +17,7 @@ export default class extends Controller {
       zoom: 30
     })
     const geolocate = new mapboxgl.GeolocateControl({
-      positionOptions: {enableHighAccuracy: false},
+      positionOptions: {enableHighAccuracy: true},
       trackUserLocation: true
       });
     this.map.addControl(geolocate);
