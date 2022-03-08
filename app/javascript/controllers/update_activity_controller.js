@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import * as turf from '@turf/turf'
 
 export default class extends Controller {
-  static targets = ['form']
+  static targets = ['form', 'distance']
   static values = {
     itinary: Array,
     distance: Number,
@@ -40,6 +40,10 @@ export default class extends Controller {
       const line = turf.lineString(this.itinaryCoords);
       this.length = turf.length(line) * 1000;
       this.update()
+      const value = document.createElement('pre');
+      value.textContent = `Total distance: ${this.length.toLocaleString()}m`;
+      this.distanceTarget.textContent = '';
+      this.distanceTarget.appendChild(value);
     }
   }
 
