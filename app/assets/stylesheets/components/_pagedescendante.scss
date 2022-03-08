@@ -3,7 +3,7 @@
   -webkit-animation: fadein 2s;
   display: list-item;
   padding: 0;
-  background-color: #284EAE;
+  background-color: #284EAEED;
   color: white;
   border-radius: 7px;
   height: 422px;
@@ -14,9 +14,10 @@
   .cardpd{
     align-items: center;
     .card-bodypd{
+      border: 1px solid #ffffff47;
+      backdrop-filter: blur(2px);
       width: 80%;
-      background-color: white;
-      color: black;
+      background-color: #a6d6f22e;
       border-radius: 15%;
       text-align: center;
       display: block;
@@ -59,9 +60,8 @@
   display: flex;
   justify-content: space-around;
   padding-right: 32px;
-  /* margin-top: 15%; */
+  bottom: -25%;
   position: relative;
-  bottom: -80px;
 }
 .card-titlepd {
   justify-content: space-around;
@@ -83,4 +83,16 @@
   font-weight: bold;
   background-color: #446fda;
   border-color: #446fda;
+  border-radius: 7px;
+  max-width: fit-content;
+  color: #f4f4f4;
+  border: 1px solid #ffffff54;
+  opacity: 0.9;
+}
+.btn-info:hover {
+  background-color: #3f6ad7;
+  color: white;
+  border: 1px solid #ffffff7f;
+  transition: .5s ease;
+  opacity: 1;
 }
