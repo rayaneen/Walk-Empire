@@ -9,9 +9,9 @@
 .infos.opened {
   font-family: "SF Pro Display", sans-serif;
   transition: height 1.6s 0s linear;
-  height: 61vh;
+  height: 72.7vh;
   border-radius: 50px 50px 0px 0px;
-  background-color: #284EAEED;
+  background-color: rgba(40, 78, 174, 0.929);
   background-image: url("https://i.postimg.cc/tCbdbqCt/stars.png");
   background-size: contain;
   position: absolute;
@@ -30,13 +30,14 @@
   .cardinfo {
     background-color: #a6d6f22e;
     border-radius: 25px;
-    height: 29vh;
+    height: fit-content;
     display: block;
     border: 1px solid #ffffff47;
     backdrop-filter: blur(2px);
     margin: 0 auto;
     text-align: center;
     width: 75%;
+    padding: 8px 4px;
   }
   .card-titleinfo {
     font-weight: bold;

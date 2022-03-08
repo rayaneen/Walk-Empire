@@ -1,0 +1,80 @@
+#loginwe {
+
+}
+
+#figma {
+  background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  border-radius: 61px 61px 0px 0px;
+  height: 100vh;
+}
+
+.simple_form {
+  width: 90%;
+  padding: 40px 16px;
+  display: block;
+  margin: 0px auto;
+}
+
+.btnlogin {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 14px;
+  margin-top: 8px;
+  padding: 18px 123px;
+  color: white;
+  width: 100%;
+}
+
+.emailwe {
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  border-radius: 14px;
+  height: 54px;
+}
+
+.passwe {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  border-radius: 14px;
+  height: 54px;
+}
+
+.createacc{
+  border: 1px solid #FFFFFF;
+  border-radius: 14px;
+  color: white!important;
+  padding:20px 70px;
+  display:table;
+  margin:auto;
+  text-decoration:none;
+}
+
+.createacc:hover{
+  border: 1px solid rgb(91, 234, 129)!important;
+  box-sizing: border-box;
+  border-radius: 14px;
+  color: rgb(91, 234, 129)!important;
+  // background-color: rgba(255, 255, 255, 0.067);
+  transition: .5s ease-in;
+}
+
+.mb-3 {
+  margin-top: 12px;
+  margin-left: 4px;
+  opacity: 0.85;
+}
+
+.mb-3:hover {
+  transition: 0.5s ease!important;
+  color: rgb(54, 82, 210)!important;
+  opacity: 1;
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 0.25em;
+  background-color: transparent;
+  border: 1px solid white;
+}
