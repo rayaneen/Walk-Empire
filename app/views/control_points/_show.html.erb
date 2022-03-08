@@ -9,20 +9,29 @@
   <div class="cardinfo" style="width: 75%;">
     <p class="card-textinfo"><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
     <p class="card-textinfo">You need to walk <%= control_point.difficulty%>m before pretending to claim it </p>
-      <% if control_point.user_id == current_user.id %>
-        <p> You own this territory </p>
-        <% else %>
-          <% if activity%>
-            <% if activity.distance < control_point.difficulty %>
-              <%= link_to "Cancel conquest", activity_path(activity), method:"DELETE", class:"btn btn-dark mx-2" %>
-            <% elsif activity.distance > control_point.difficulty %>
-              <%= link_to "CAPTURE CONTROL POINT", control_point_path(current_user, control_point_id: control_point.id, activity: activity), method: "PATCH", class:"btn btn-dark mx-2" %>
+      <div data-controller="alerts">
+      <div data-alerts-target>
+          <% if control_point.user_id == current_user.id %>
+            <p> You own this territory </p>
             <% else %>
-              <p> Walk more </p>
+              <% if activity%>
+                <% if activity.distance < control_point.difficulty %>
+                <button data-action= "click->alerts#cancel" class="btn btn-dark mx-2">CANCEL CONQUEST</button>
+                <%= link_to "", activity_path(activity), method:"DELETE", id: "delete-link", class: "hidden" %>
+                <% elsif activity.distance > control_point.difficulty %>
+                  <button data-action= "click->alerts#congrats" class="btn btn-dark mx-2">CAPTURE CONTROL POINT</button>
+                    <%= link_to "", control_point_path(current_user, control_point_id: control_point.id,
+                     activity: activity), method: "PATCH", id: "update-link", class: "hidden" %>
+                  </div>
+                <% else %>
+                  <p> Walk more </p>
+              <% end %>
+            <% else %>
+              <%= link_to "START CAPTURE", control_point_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-info2"%>
+            <% end %>
           <% end %>
-        <% else %>
-          <%= link_to "START CAPTURE", control_point_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-info2"%>
-        <% end %>
-      <% end %>
+        </div>
+      </div>
   </div>
+<div>
 <div>
