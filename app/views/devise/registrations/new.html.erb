@@ -1,5 +1,22 @@
-<h2>Sign up</h2>
 
+<style>
+
+body{
+  color:white;
+  background: url(https://images.unsplash.com/photo-1646087816237-e4c4d4cd69d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-position: 0 -169px;
+}
+
+</style>
+
+<h2 style="text-align:center;">Sign up</h2>
+<div class="figmar" style="
+    background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px);
+    border-radius: 61px 61px 0px 0px;
+    height: 100vh;
+">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -7,19 +24,21 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "email", class:'emailwe' }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", class:'passwe' } %>
     <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", class:'passwe' } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class:'btnlogin1' %>
+    <%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(resource_name),class:'btnlogin2'%><br />
+<% end %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>
