@@ -18,12 +18,17 @@
 }
 
 .btnlogin {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,0.75);
   border-radius: 14px;
   margin-top: 8px;
   padding: 18px 123px;
   color: white;
   width: 100%;
+}
+
+.btnlogin:hover {
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.80);
 }
 
 .btnlogin1 {
@@ -34,6 +39,11 @@
   color: white;
   width: 100%;
   margin-bottom: 32px;
+}
+
+.btnlogin1:hover {
+  border: 1px solid rgb(25, 25, 25);
+  color: rgb(212,212,212);
 }
 
 .btnlogin2 {
