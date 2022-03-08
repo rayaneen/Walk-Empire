@@ -1,7 +1,7 @@
 <div data-controller="create-activity"
-     data-update-activity-longitude-value="<%=@control_point.longitude%>"
-     data-update-activity-latitude-value="<%=@control_point.latitude%>"
-     data-update-activity-difficulty-value="<%=@control_point.difficulty%>">
+    data-update-activity-longitude-value="<%=@control_point.longitude%>"
+    data-update-activity-latitude-value="<%=@control_point.latitude%>"
+    data-update-activity-difficulty-value="<%=@control_point.difficulty%>">
   <div class="imageinfo">
     <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo"%>
   </div>
@@ -9,20 +9,31 @@
   <div class="cardinfo" style="width: 75%;">
     <p class="card-textinfo"><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
     <p class="card-textinfo">You need to walk <%= control_point.difficulty%>m before pretending to claim it </p>
+      <div data-controller="alerts">
+      <div data-alerts-target>
       <% if control_point.user_id == current_user.id %>
         <p> You own this territory </p>
-        <% else %>
-          <% if activity%>
-            <% if activity.distance < control_point.difficulty %>
-              <%= link_to "Cancel conquest", activity_path(activity), method:"DELETE", class:"btn btn-dark mx-2" %>
-            <% elsif activity.distance > control_point.difficulty %>
-              <%= link_to "CAPTURE CONTROL POINT", control_point_path(current_user, control_point_id: control_point.id, activity: activity), method: "PATCH", class:"btn btn-dark mx-2" %>
-            <% else %>
-              <p> Walk more </p>
+      <% else %>
+        <% if activity%>
+          <% if activity.distance < control_point.difficulty %>
+            <div class= "w-100 overflow-hidden" >
+              <%= image_tag("giphy2.gif", id:"gifinfo")%>
+            </div>
+            <i class="far fa-flag" style=color:white;></i>
+            <button data-action= "click->alerts#cancel" class="btn btn-dark mx-2">CANCEL CONQUEST</button>
+            <i class="far fa-flag" style=color:white;></i>
+            <%= link_to "", activity_path(activity), method:"DELETE", id: "delete-link", class: "hidden" %>
+          <% elsif activity.distance > control_point.difficulty %>
+            <button data-action= "click->alerts#congrats" class="btn btn-dark mx-2">CAPTURE CONTROL POINT</button>
+            <%= link_to "", control_point_path(current_user, control_point_id: control_point.id,
+                          activity: activity), method: "PATCH", id: "update-link", class: "hidden" %>
+          <% else %>
+            <p> Walk more </p>
           <% end %>
         <% else %>
           <%= link_to "START CAPTURE", control_point_activities_path(current_user, control_point_id: control_point.id), method: "POST", class:"btn btn-info2"%>
         <% end %>
       <% end %>
+    </div>
   </div>
-<div>
+</div>

@@ -60,7 +60,7 @@
   display: flex;
   justify-content: space-around;
   padding-right: 32px;
-  bottom: -25%;
+  bottom: auto;
   position: relative;
 }
 .card-titlepd {
@@ -76,7 +76,6 @@
 .card-textpd {
   font-weight: bold;
   margin-top: 1rem;
-  padding-top: 20px;
 
 }
 .btn-info {
@@ -95,4 +94,8 @@
   border: 1px solid #ffffff7f;
   transition: .5s ease;
   opacity: 1;
+}
+.cross {
+  color: #f4f4f4;
+  font-size: xx-large;
 }
