@@ -1,7 +1,7 @@
 <div data-controller="create-activity"
-     data-update-activity-longitude-value="<%=@control_point.longitude%>"
-     data-update-activity-latitude-value="<%=@control_point.latitude%>"
-     data-update-activity-difficulty-value="<%=@control_point.difficulty%>">
+    data-update-activity-longitude-value="<%=@control_point.longitude%>"
+    data-update-activity-latitude-value="<%=@control_point.latitude%>"
+    data-update-activity-difficulty-value="<%=@control_point.difficulty%>">
   <div class="imageinfo">
     <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo"%>
   </div>
@@ -14,7 +14,12 @@
         <% else %>
           <% if activity%>
             <% if activity.distance < control_point.difficulty %>
+            <div class= "w-100 overflow-hidden" >
+            <%= image_tag("giphy2.gif", id:"gifinfo")%>
+            </div>
+              <i class="far fa-flag" style=color:white;></i>
               <%= link_to "Cancel conquest", activity_path(activity), method:"DELETE", class:"btn btn-dark mx-2" %>
+              <i class="far fa-flag" style=color:white;></i>
             <% elsif activity.distance > control_point.difficulty %>
               <%= link_to "CAPTURE CONTROL POINT", control_point_path(current_user, control_point_id: control_point.id, activity: activity), method: "PATCH", class:"btn btn-dark mx-2" %>
             <% else %>
