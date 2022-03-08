@@ -30,7 +30,7 @@ User.create!(email: "user1@gmail.com", password:"secret", nickname: "No one", xp
 puts "Finished creating users!"
 
 puts "Creating Le Wagon Control Point"
-ControlPoint.create!(name: "Le Wagon", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Le Wagon", status:"Capturé", difficulty: 10,
                      latitude: 44.85993992280524, longitude: -0.5658384933716525, user_id: rand(User.first.id..User.last.id))
 puts "Done!"
 puts "Creating Jardin Public Control Point"

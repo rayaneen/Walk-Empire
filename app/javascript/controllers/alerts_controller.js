@@ -9,7 +9,9 @@ export default class extends Controller {
       icon: "success",
       button: "Nice!",
     });
-    setTimeout(updateActivity, 2000)
+    playAudio();
+    setTimeout(updateActivity, 100000000000000);
+
   }
 
   cancel() {
@@ -32,6 +34,11 @@ export default class extends Controller {
         }
       });
   }
+}
+
+const playAudio = () => {
+  const audio = new Audio('app/assets/audios/win.mp3');
+  audio.play();
 }
 
 const cancelActivity = () => {
