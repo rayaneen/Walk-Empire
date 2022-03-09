@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :activities, dependent: :destroy
 
   def current_activity(control_point)
-    activity = activities.where(status: nil).where(control_point: control_point).last
+    activity = activities.where(status: 'Pending').where(control_point: control_point).last
     if activity
       activity
     else
