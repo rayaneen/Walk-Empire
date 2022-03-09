@@ -49,6 +49,10 @@ ControlPoint.create!(name: "CAPC musée d'art contemporain de Bordeaux", status:
                      latitude: 44.848627741310736, longitude: -0.5720502867787579, user_id: rand(User.first.id..User.last.id))
 puts "Done!"
 
+puts "Creating Eglise St Martial"
+ControlPoint.create!(name: "Eglise St Martial", status: "Unclaimed", difficulty: 10,
+                     latitude: 44.857989, longitude: -0.564852, user: User.find_by_nickname("No one"))
+puts "Done!"
 
 puts "Creating Grand-Théâtre"
 ControlPoint.create!(name: "Grand-Théâtre", status:"Capturé", difficulty: rand(1..1000),
