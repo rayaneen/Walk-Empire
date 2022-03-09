@@ -49,3 +49,30 @@
 .swal-icon--success__hide-corners {
   display: none;
 }
+
+.swal2-container.swal2-center>.swal2-popup{
+  background-color: #242424;
+  border: 3px solid white;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.swal2-loader {
+  border-color: #eecd2a transparent #eecd2a transparent !important;
+}
+
+.levelup {
+  width: 400px !important;
+  height: 400px !important;
+  border-radius: 50% !important;
+  padding: '3em';
+  color: #ffffff;
+  background: url('https://images.assetsdelivery.com/compings_v2/mar1koff/mar1koff2003/mar1koff200300009.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  text-align: center !important;
+}
+
+.swal2-backdrop-show {
+  background-size: cover !important;
+}
