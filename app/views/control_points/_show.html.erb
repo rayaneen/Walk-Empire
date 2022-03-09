@@ -24,7 +24,7 @@
             <i class="far fa-flag" style=color:white;></i>
             <%= link_to "", activity_path(activity), method:"DELETE", id: "delete-link", class: "hidden" %>
           <% elsif activity.distance > control_point.difficulty %>
-            <button data-action= "click->alerts#congrats" class="btn btn-dark mx-2">CAPTURE CONTROL POINT</button>
+            <button data-action= "click->alerts#capture" class="btn btn-dark mx-2">CAPTURE CONTROL POINT</button>
             <%= link_to "", control_point_path(current_user, control_point_id: control_point.id,
                           activity: activity), method: "PATCH", id: "update-link", class: "hidden" %>
           <% else %>

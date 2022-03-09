@@ -8,7 +8,7 @@
 
 .infos.opened {
   font-family: "SF Pro Display", sans-serif;
-  transition: height 1.6s 0s linear;
+  transition: height 0.8s 0s linear;
   height: 72.7vh;
   border-radius: 50px 50px 0px 0px;
   background-color: rgba(40, 78, 174, 0.929);
@@ -74,8 +74,8 @@
     color: #ffffffdb;
     border-style: none;
     border: 0.15px solid #8c8787c7;
-    background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(245, 240, 89, 0.6) 0.85%, rgba(223,147,0,33%) 100%);
-    backdrop-filter: blur(1px);
+    background: linear-gradient(157.44deg, rgba(255,255,255,0.6) 0.84%, rgba(255,255,255,0%) 0.85%, #ffffff42 100%);
+    backdrop-filter: blur(8px);
 }
 
 .alert-info:hover {
