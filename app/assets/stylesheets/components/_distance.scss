@@ -6,13 +6,17 @@
   }
 
   .distance-container > * {
-  background-color: white;
-  backdrop-filter: blur(50px);
-  color: black;
-  font-size: 11px;
-  line-height: 18px;
-  display: block;
-  margin: 0;
-  padding: 5px 10px;
-  border-radius: 3px;
+    background-color: #F4D22A;
+    backdrop-filter: blur(50px);
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+    display: block;
+    margin-left: 57%;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: 100%;
+    position: relative;
+    top: -80px;
   }
