@@ -9,7 +9,9 @@ export default class extends Controller {
       icon: "success",
       button: "Nice!",
     });
-    setTimeout(updateActivity, 2000)
+    playAudio();
+    setTimeout(updateActivity, 3000);
+
   }
 
   cancel() {
@@ -25,13 +27,18 @@ export default class extends Controller {
           swal("Your conquest has been canceled!", {
             icon: "success",
           });
-          setTimeout(cancelActivity, 2000)
+          setTimeout(cancelActivity, 3000)
 
         } else {
           swal("Your conquest is safe!");
         }
       });
   }
+}
+
+const playAudio = () => {
+  const audio = new Audio('https://res.cloudinary.com/duu07h2y1/video/upload/v1646814492/mixkit-winning-notification-2018_gjwuzz.wav');
+  audio.play();
 }
 
 const cancelActivity = () => {
