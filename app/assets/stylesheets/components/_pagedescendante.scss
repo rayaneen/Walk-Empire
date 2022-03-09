@@ -1,12 +1,22 @@
+.opened2 {
+  transition: height 1.6s 0s linear;
+  height: 72.7vh;
+  display: list-item;
+}
+
+.close {
+  transition: height 1.2s 0s linear;
+  height:0;
+}
+
 .container-fluidpd {
-  animation: fadein 2s;
-  -webkit-animation: fadein 2s;
+  transition: height 1.6s 0s linear;
   display: list-item;
   padding: 0;
   background-color: #284EAEED;
   color: white;
   border-radius: 7px;
-  height: 422px;
+  height: 72.7vh;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
   background-image: url("https://i.postimg.cc/tCbdbqCt/stars.png");
@@ -40,22 +50,7 @@
     }
   }
 }
-@keyframes fadein {
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-webkit-keyframes fadein { /* sur Safari et Chrome */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
+
 .ulpd {
   display: flex;
   justify-content: space-around;
