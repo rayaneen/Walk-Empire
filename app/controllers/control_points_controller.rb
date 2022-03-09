@@ -26,11 +26,12 @@ class ControlPointsController < ApplicationController
     @activity = Activity.find_by(user_id: current_user.id)
     if @activity.distance >= @control_point.difficulty
       @control_point.user_id = current_user.id
+      current_user.xp += 1
+      current_user.save
       @control_point.save
     else
       redirect_to root_path
     end
     redirect_to root_path
   end
-
 end

@@ -27,6 +27,8 @@ end
 puts "Creating Admin"
 User.create!(email: "user1@gmail.com", password:"secret", nickname: "No one", xp: 0)
 
+puts "Creating profile for DEMO!"
+User.create!(email: "user2@gmail.com", password:"secret", nickname: "Lucien", xp: 0)
 puts "Finished creating users!"
 
 puts "Creating Le Wagon Control Point"
