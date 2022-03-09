@@ -10,7 +10,7 @@ export default class extends Controller {
       button: "Nice!",
     });
     playAudio();
-    setTimeout(updateActivity, 2000);
+    setTimeout(updateActivity, 3000);
 
   }
 
@@ -27,7 +27,7 @@ export default class extends Controller {
           swal("Your conquest has been canceled!", {
             icon: "success",
           });
-          setTimeout(cancelActivity, 2000)
+          setTimeout(cancelActivity, 3000)
 
         } else {
           swal("Your conquest is safe!");

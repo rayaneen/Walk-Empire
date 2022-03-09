@@ -38,3 +38,14 @@
 .swal-button.swal-button--cancel {
   color: #242424;
 }
+
+
+.swal-icon--success:after {
+  display: none;
+}
+.swal-icon--success:before {
+  display: none;
+}
+.swal-icon--success__hide-corners {
+  display: none;
+}
