@@ -25,7 +25,6 @@ export default class extends Controller {
     const from = turf.point([long, lat]);
     const to = turf.point([this.longitudeValue, this.latitudeValue]);
     const spaceBetween = turf.distance(from, to) * 1000;
-    console.log(spaceBetween);
     if ((spaceBetween < 20) && (this.length > this.difficultyValue)) {
       this.update('Successful')}
     else if ((spaceBetween < 20) && (this.length < this.difficultyValue) ) {
@@ -39,7 +38,7 @@ export default class extends Controller {
     if (this.itinaryCoords.length >= 2) {
       const line = turf.lineString(this.itinaryCoords);
       this.length = turf.length(line) * 1000;
-      this.update()
+      this.update('Pending')
       const value = document.createElement('pre');
       value.textContent = `Total distance: ${this.length.toLocaleString()}m`;
       this.distanceTarget.textContent = '';
@@ -57,6 +56,7 @@ export default class extends Controller {
     this.formTarget.querySelector("#activity_distance").value = this.length
     this.formTarget.querySelector("#activity_status").value = s
     const body = new FormData(this.formTarget)
+    console.log(body)
     const url = this.formTarget.action
     fetch(url, {
       method: 'PATCH',
