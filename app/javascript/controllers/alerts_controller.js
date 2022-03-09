@@ -10,7 +10,7 @@ export default class extends Controller {
       button: "Nice!",
     });
     playAudio();
-    setTimeout(updateActivity, 100000000000000);
+    setTimeout(updateActivity, 2000);
 
   }
 
@@ -37,7 +37,7 @@ export default class extends Controller {
 }
 
 const playAudio = () => {
-  const audio = new Audio('app/assets/audios/win.mp3');
+  const audio = new Audio('https://res.cloudinary.com/duu07h2y1/video/upload/v1646814492/mixkit-winning-notification-2018_gjwuzz.wav');
   audio.play();
 }
 
