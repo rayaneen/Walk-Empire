@@ -34,17 +34,15 @@ class ActivitiesController < ApplicationController
   end
 
   def update
-    puts "$$$$$$$$$$$$$$$"
     @activity = Activity.find(params[:id])
-    @activity.update(activity_params)
+    @activity.assign_attributes(activity_params)
+    @activity.save
     render json: @activity
   end
 
   private
 
   def activity_params
-    puts "================="
-    puts params
-    params.require(:activity).permit(:distance, :itinary, :status)
+    params.require(:activity).permit(:distance, :status, :itinary)
   end
 end
