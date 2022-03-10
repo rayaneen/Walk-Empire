@@ -49,6 +49,7 @@
     padding-right: 32px;
     bottom: auto;
     position: relative;
+    margin: -8px;
   }
   .card-titlepd {
     justify-content: space-around;
@@ -114,5 +115,22 @@
   }
   .card-textpd {
     height: auto;
+    font-family:"SF Pro Display", sans-serif;
+    font-size: 16px;
+  }
+  .card-textpd p {
+    margin-bottom:0;
+    margin-top: 8px;
+  }
+  .user-lvl {
+    font-size: 24px;
+    padding: 24px;
+    background: #0000005e;
+    margin: 16px;
+    border-radius: 16px;
+  }
+  .last-walk {
+    font-size: 24px;
+
   }
 }
