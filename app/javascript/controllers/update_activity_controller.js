@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import * as turf from '@turf/turf'
 
+
 export default class extends Controller {
   static targets = ['form', 'distance']
   static values = {
@@ -22,23 +23,14 @@ export default class extends Controller {
     const long = data.coords.longitude
     const lat = data.coords.latitude
     this.itinaryCoords.push([long, lat])
-    const from = turf.point([long, lat]);
-    const to = turf.point([this.longitudeValue, this.latitudeValue]);
-    const spaceBetween = turf.distance(from, to) * 1000;
-    if ((spaceBetween < 20) && (this.length > this.difficultyValue)) {
-      this.update('Successful')}
-    else if ((spaceBetween < 20) && (this.length < this.difficultyValue) ) {
-      this.update('Failed')
-    } else {
-      window.setTimeout(this.beginItinary.bind(this), 5000)
-    }
+    window.setTimeout(this.beginItinary.bind(this), 5000)
   }
 
   computeDistance() {
     if (this.itinaryCoords.length >= 2) {
       const line = turf.lineString(this.itinaryCoords);
       this.length = turf.length(line) * 1000;
-      this.update('Pending')
+      this.update()
       const value = document.createElement('pre');
       value.textContent = `${this.length.toLocaleString()} m walked`;
       this.distanceTarget.textContent = '';
@@ -51,10 +43,9 @@ export default class extends Controller {
     this.computeDistance()
   }
 
-  update(s) {
+  update() {
     this.formTarget.querySelector("#activity_itinary").value = JSON.stringify(this.itinaryCoords)
     this.formTarget.querySelector("#activity_distance").value = this.length
-    this.formTarget.querySelector("#activity_status").value = s
     const body = new FormData(this.formTarget)
     console.log(body)
     const url = this.formTarget.action
