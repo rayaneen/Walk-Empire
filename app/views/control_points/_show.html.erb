@@ -2,9 +2,15 @@
     data-update-activity-longitude-value="<%=@control_point.longitude%>"
     data-update-activity-latitude-value="<%=@control_point.latitude%>"
     data-update-activity-difficulty-value="<%=@control_point.difficulty%>">
-  <div class="imageinfo">
-    <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo"%>
-  </div>
+  <% if control_point.user_id == current_user.id %>
+    <div class="imageinfo">
+      <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo2"%>
+    </div>
+  <% else %>
+    <div class="imageinfo">
+      <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo"%>
+    </div>
+  <% end %>
   <h5 class="card-titleinfo"><%= control_point.name%></h5>
   <div class="cardinfo" style="width: 75%;">
     <div class="card-textinfo">
