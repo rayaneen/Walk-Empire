@@ -31,7 +31,7 @@ class ControlPointsController < ApplicationController
       current_user.save
       @control_point.save
     else
-      redirect_to root_path
+      render partial: 'control_points/show', locals: { control_point: @control_point, activity: @activity }, formats: [:html]
     end
     redirect_to root_path
   end
