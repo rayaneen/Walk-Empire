@@ -26,6 +26,7 @@ class ControlPointsController < ApplicationController
     @activity = current_user.activities.last
     if @activity.distance >= @control_point.difficulty
       @control_point.user_id = current_user.id
+      @control_point.difficulty = @activity.distance
       current_user.xp += 1
       current_user.save
       @control_point.save
