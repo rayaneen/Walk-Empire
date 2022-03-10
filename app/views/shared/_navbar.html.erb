@@ -1,4 +1,4 @@
-<div  data-controller="navbar">
+
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <%= link_to "/", class: "navbar-brand" do %>
       <img src="https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png" href="#" class="shine" id="logoem" style="display: block;margin-left: -8px;margin-right: auto;min-width: 80px;">
@@ -15,7 +15,7 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://i.postimg.cc/wBhzNQLm/MINEAVATAR.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <p class="dropdown-item" data-action="click->navbar#showProfil">Profil</p>
+              <p class="dropdown-item" data-action="click->navbar#displayProfil">Profil</p>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
@@ -27,26 +27,4 @@
       </ul>
     </div>
   </div>
-  <div class="close", data-navbar-target="showProfil">
-    <div class="container-fluidpd">
-    <% if current_user != nil %>
-    <div class="cardpd" style="width: 100%;">
-      <div class="imagepd">
-        <%= image_tag "https://i.postimg.cc/wBhzNQLm/MINEAVATAR.png", id:"avatarpd"%>
-      </div>
-      <h5 class="card-titlepd"><%= current_user.email  %></h5>
-      <div class="card-bodypd">
-        <p class="card-textpd"><i class="fas fa-trophy"></i> XP: </p>
-        <p class="card-textpd"> 9000 points</p>
-        <p class="card-textpd"><i class="fas fa-running"></i>Total walk:</p>
-        <p class="card-textpd">3 kilometers</p>
-      <ul class="ulpd">
-        <a class="cross" href="/"><i class="far fa-times-circle"></i>
-        </a>
-      </ul>
-      </div>
-    </div>
-    <% end %>
-    </div>
-  </div>
-</div>
+

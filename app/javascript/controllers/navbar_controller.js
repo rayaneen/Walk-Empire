@@ -1,12 +1,11 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "showProfil" ]
+  static targets = [ "profil" ]
 
-  showProfil() {
-    this.showProfilTarget.classList = ""
+  displayProfil() {
+    this.profilTarget.classList = "opened2"
   }
-  hideProfil() {
-    this.hideProfilTarget.classlist = "close"
-  }
+
+
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
 
 html,
 body{
@@ -177,7 +178,6 @@ body{
 }
 
 .divbtn{
-
 }
 
 .btnerrorc {
@@ -188,7 +188,8 @@ body{
   border-radius: 4px;
   padding: 14px 42px;
   position: absolute;
-  top: 585px;
+  /* top: 585px; */
+  top: 67%;
   backdrop-filter: blur(4px);
 }
 

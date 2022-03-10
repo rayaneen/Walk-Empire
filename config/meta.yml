@@ -1,0 +1,5 @@
+meta_product_name : "Walk Empire"
+meta_title : "Walk Empire - Walk like a Warrior"
+meta_description : "Capture the most territories and become the most powerful in Walk Empire"
+meta_image : "cover.png" # doit exister dans `app/assets/images/`
+twitter_account : "@product_twitter_account" # requis pour les cartes Twitter
