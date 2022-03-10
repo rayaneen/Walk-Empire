@@ -6,6 +6,10 @@
     <div class="imageinfo">
       <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo2"%>
     </div>
+  <% elsif  control_point.user.nickname == "No one"%>
+    <div class="imageinfo">
+      <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo3"%>
+    </div>
   <% else %>
     <div class="imageinfo">
       <%= image_tag "https://i.postimg.cc/TYZqLdCs/BUILDINGFRITEBLANCHE.png", id:"imginfo"%>
