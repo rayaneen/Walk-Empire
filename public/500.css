@@ -28,9 +28,9 @@ body {
   opacity: 1;
 }
 
-@heading-color: #ff45ae;
+/* @heading-color: #ff45ae;
 @sub-heading-color: #66f38a;
-@color: #9f9f9fb3;
+@color: #9f9f9fb3; */
 
 .vc-container {
   display: flex;

@@ -17,8 +17,8 @@ puts "Creating 20 users"
   user = User.new(
     email: Faker::Internet.email,
     password: "secret",
-    nickname: Faker::Internet.username,
-    xp: rand(0...1000)
+    nickname: Faker::Internet.username(specifier: 5..8),
+    xp: rand(1...100)
   )
   user.save!
   puts "#{user.nickname} with #{user.xp} xp points created!"
@@ -47,7 +47,7 @@ ControlPoint.create!(name: "iBoat", status:"Capturé", difficulty: rand(1..1000)
 puts "Done!"
 
 puts "Creating CAPC musée d'art contemporain de Bordeaux"
-ControlPoint.create!(name: "CAPC musée d'art contemporain de Bordeaux", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "CAPC", status:"Capturé", difficulty: rand(1..1000),
                      latitude: 44.848627741310736, longitude: -0.5720502867787579, user_id: rand(User.first.id..User.last.id))
 puts "Done!"
 

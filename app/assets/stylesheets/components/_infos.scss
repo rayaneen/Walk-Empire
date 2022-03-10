@@ -54,7 +54,7 @@
     display: block;
     margin: 0 auto;
     border-color: #446fda;
-    width: 54%;
+    width: 75%;
     border-radius: 7px;
     max-width: fit-content;
     color: #f4f4f4;
@@ -67,6 +67,34 @@
     border: 1px solid #ffffff7f;
     transition: .5s ease;
     opacity: 1;
+  }
+  .card-owned-territory-info {
+    color: white;
+    background-color: #4caf50;
+    padding: 12px 8px;
+    border-radius: 18px;
+    font-weight: bold;
+  }
+  .card-meters-to-walk-info {
+    font-weight: bold;
+    background-color: #24242426;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 24px;
+    margin: 16px;
+    border: 2px white solid;
+  }
+  h6 {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+  .card-user-name {
+    font-size: 20px;
+    color: #eecd2a;
   }
 }
 

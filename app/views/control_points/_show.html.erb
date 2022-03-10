@@ -7,12 +7,19 @@
   </div>
   <h5 class="card-titleinfo"><%= control_point.name%></h5>
   <div class="cardinfo" style="width: 75%;">
-    <p class="card-textinfo"><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong> is controling this territory </p>
-    <p class="card-textinfo">You need to walk <%= control_point.difficulty%>m before pretending to claim it </p>
+    <div class="card-textinfo">
+      <h6><span class="card-user-name"><strong><%= control_point.user.nickname%> (lvl <%=control_point.user.xp %>)</strong></span></h6>
+      <p>is controling this territory </p>
+      <p>You need to walk </p>
+      <div class="card-meters-to-walk-info">
+        <h6><%= control_point.difficulty%>m</h6>
+      </div>
+      <p>before pretending to claim it </p>
+    </div>
       <div data-controller="alerts">
       <div data-alerts-target>
       <% if control_point.user_id == current_user.id %>
-        <p> You own this territory </p>
+        <p class="card-owned-territory-info"> You own this territory </p>
       <% else %>
         <% if activity%>
           <% if activity.distance < control_point.difficulty %>
