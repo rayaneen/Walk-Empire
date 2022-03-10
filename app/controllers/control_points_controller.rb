@@ -23,11 +23,10 @@ class ControlPointsController < ApplicationController
 
   def update
     @control_point = ControlPoint.find(params[:control_point_id])
-    @activity = current_user.activities.last
+    @activity = Activity.find_by(user_id: current_user.id)
     if @activity.distance >= @control_point.difficulty
       @control_point.user_id = current_user.id
       current_user.xp += 1
-      @control_point.difficulty = @activity.distance
       current_user.save
       @control_point.save
     else
