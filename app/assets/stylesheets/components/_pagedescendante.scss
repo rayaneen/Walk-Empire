@@ -19,10 +19,11 @@
       align-items: center;
       opacity: 0;
       .card-bodypd{
-        border: 1px solid #ffffff47;
+        border: 1px solid #3d3d3d36;
         backdrop-filter: blur(2px);
         width: 80%;
         background-color: #a6d6f22e;
+        box-shadow: 0px 0px 6px #0000007d;
         border-radius: 15%;
         text-align: center;
         display: block;
@@ -32,12 +33,25 @@
         position: relative;
         width: 100%;
         #avatarpd{
-          width: 90px;
-          border-radius: 50%;
-          position: absolute;
-          top: 20%;
-          left: 42%;
-          border: 3px #0B75E8 solid;
+        width: 90px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        top: 25px;
+        border: 3px #0B75E8 solid;
+        margin: 0 auto;
+        opacity: 0.7;
+        }
+        #avatarpd:hover{
+        width: 90px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        top: 25px;
+        border: 2px #0B75E8 solid;
+        margin: 0 auto;
+        opacity: 1;
+        transition: .5s ease;
         }
       }
     }
