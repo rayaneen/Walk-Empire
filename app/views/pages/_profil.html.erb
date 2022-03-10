@@ -11,7 +11,11 @@
           <p class=""><i class="fas fa-trophy"></i> Level: </p>
           <p class="user-lvl"> <%= current_user.xp %> </p>
           <p class=""><i class="fas fa-running"></i>Your last walk:</p>
-          <p class="last-walk"><%= current_user.activities.last.distance %>m</p>
+          <% if current_user.activities.any?%>
+            <p class="last-walk"><%= current_user.activities.last.distance %>m</p>
+            <% else %>
+            <p> 0m </p>
+          <% end %>
         </div>
           <ul class="ulpd">
           <button name="button" type="submit" class="btn cross" data-action="navbar#displayProfil">
