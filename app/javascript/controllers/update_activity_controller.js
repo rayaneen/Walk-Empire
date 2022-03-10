@@ -23,7 +23,7 @@ export default class extends Controller {
     const long = data.coords.longitude
     const lat = data.coords.latitude
     this.itinaryCoords.push([long, lat])
-    window.setTimeout(this.beginItinary.bind(this), 5000)
+    window.setTimeout(this.beginItinary.bind(this), 2000)
   }
 
   computeDistance() {
