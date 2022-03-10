@@ -1,4 +1,4 @@
-<div class="close", data-navbar-target="profil">
+<div class="profil" data-navbar-target="profil">
   <div class="container-fluidpd">
     <% if current_user != nil %>
       <div class="cardpd" style="width: 100%;">
@@ -12,8 +12,10 @@
           <p class="card-textpd"><i class="fas fa-running"></i>Total walk:</p>
           <p class="card-textpd">3 kilometers</p>
           <ul class="ulpd">
-            <a class="cross" href="/"><i class="far fa-times-circle"></i>
-            </a>
+          <button name="button" type="submit" class="btn cross" data-action="navbar#displayProfil">
+              <i class="far fa-times-circle"></i>
+          </button>
+
           </ul>
         </div>
       </div>

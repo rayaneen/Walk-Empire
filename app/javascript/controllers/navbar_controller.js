@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = [ "profil" ]
 
   displayProfil() {
-    this.profilTarget.classList = "opened2"
+    this.profilTarget.classList.toggle("opened2")
   }
 
 
