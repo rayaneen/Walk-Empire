@@ -1,96 +1,118 @@
-.opened2 {
-  transition: height 1.6s 0s linear;
-  height: 72.7vh;
-  display: list-item;
-}
-
-.close {
+.profil {
   transition: height 1.2s 0s linear;
   height:0;
-}
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  overflow: hidden;
 
-.container-fluidpd {
-  transition: height 1.6s 0s linear;
-  display: list-item;
-  padding: 0;
-  background-color: #284EAEED;
-  color: white;
-  border-radius: 7px;
-  height: 72.7vh;
-  border-bottom-left-radius: 15%;
-  border-bottom-right-radius: 15%;
-  background-image: url("https://i.postimg.cc/tCbdbqCt/stars.png");
-  background-size: contain;
-  .cardpd{
-    align-items: center;
-    .card-bodypd{
-      border: 1px solid #ffffff47;
-      backdrop-filter: blur(2px);
-      width: 80%;
-      background-color: #a6d6f22e;
-      border-radius: 15%;
-      text-align: center;
-      display: block;
-      margin: auto;
-      height: 250px;
-    }
-    .imagepd {
-      position: relative;
-      width: 100%;
-      height: 150px;
-      #avatarpd{
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        position: absolute;
-        top: 20%;
-        left: 42%;
-        border: 3px #0B75E8 solid;
+  .container-fluidpd {
+    padding: 0;
+    background-color: #284EAEED;
+    color: white;
+    border-radius: 7px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-image: url("https://i.postimg.cc/tCbdbqCt/stars.png");
+    background-size: contain;
+    .cardpd{
+      align-items: center;
+      opacity: 0;
+      .card-bodypd{
+        border: 1px solid #ffffff47;
+        backdrop-filter: blur(2px);
+        width: 80%;
+        background-color: #a6d6f22e;
+        border-radius: 15%;
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+      .imagepd {
+        position: relative;
+        width: 100%;
+        #avatarpd{
+          width: 90px;
+          border-radius: 50%;
+          position: absolute;
+          top: 20%;
+          left: 42%;
+          border: 3px #0B75E8 solid;
+        }
       }
     }
   }
+
+  .ulpd {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 32px;
+    bottom: auto;
+    position: relative;
+  }
+  .card-titlepd {
+    justify-content: space-around;
+    font-size: 30px;
+    color: white;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    display: flex;
+  }
+  .card-textpd {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .btn-info {
+    font-weight: bold;
+    background-color: #446fda;
+    border-color: #446fda;
+    border-radius: 7px;
+    max-width: fit-content;
+    color: #f4f4f4;
+    border: 1px solid #ffffff54;
+    opacity: 0.9;
+  }
+  .btn-info:hover {
+    background-color: #3f6ad7;
+    color: white;
+    border: 1px solid #ffffff7f;
+    transition: .5s ease;
+    opacity: 1;
+  }
+  .cross {
+    color: #f4f4f4;
+    font-size: xx-large;
+  }
 }
 
-.ulpd {
-  display: flex;
-  justify-content: space-around;
-  padding-right: 32px;
-  bottom: auto;
-  position: relative;
-}
-.card-titlepd {
-  justify-content: space-around;
-  font-size: 30px;
-  color: white;
-  margin-top: -2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  display: flex;
-}
-
-.card-textpd {
-  font-weight: bold;
-  margin-top: 1rem;
-
-}
-.btn-info {
-  font-weight: bold;
-  background-color: #446fda;
-  border-color: #446fda;
-  border-radius: 7px;
-  max-width: fit-content;
-  color: #f4f4f4;
-  border: 1px solid #ffffff54;
-  opacity: 0.9;
-}
-.btn-info:hover {
-  background-color: #3f6ad7;
-  color: white;
-  border: 1px solid #ffffff7f;
-  transition: .5s ease;
-  opacity: 1;
-}
-.cross {
-  color: #f4f4f4;
-  font-size: xx-large;
+.profil.opened2 {
+ /*  transition: height 1.6s 0s linear; */
+  height: 74.7vh;
+  /* display: list-item; */
+  .container-fluidpd {
+        height: 85%;
+        .cardpd{
+          opacity: 1;
+          transition: opacity 1s linear 1.1s;
+          .card-bodypd{
+            height: 250px;
+          }
+          .imagepd {
+            height: 150px;
+            #avatarpd{
+              height: 90px;
+            }
+          }
+        }
+      }
+  .card-titlepd {
+    height: auto;
+  }
+  .btn-info {
+    height: auto;
+  }
+  .card-textpd {
+    height: auto;
+  }
 }
