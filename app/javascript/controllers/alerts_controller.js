@@ -12,7 +12,7 @@ export default class extends Controller {
       button: "Nice!",
     });
     playAudio();
-    setTimeout(updateActivity, 30000000);
+    setTimeout(updateActivity, 3000);
 
   }
 

@@ -33,7 +33,7 @@
               <%= image_tag("giphy2.gif", id:"gifinfo")%>
             </div>
             <i class="far fa-flag" style=color:white;></i>
-            <button data-action= "click->alerts#cancel" class="btn btn-dark mx-2">CANCEL CONQUEST</button>
+            <button data-action= "click->alerts#cancel" class="btn btn-dark mx-1">CANCEL CONQUEST</button>
             <i class="far fa-flag" style=color:white;></i>
             <%= link_to "", activity_path(activity), method:"DELETE", id: "delete-link", class: "hidden" %>
           <% elsif activity.distance > control_point.difficulty %>
