@@ -32,7 +32,7 @@ export default class extends Controller {
       this.length = turf.length(line) * 1000;
       this.update()
       const value = document.createElement('pre');
-      value.textContent = `Total distance: ${this.length.toLocaleString()}m`;
+      value.textContent = `${this.length.toLocaleString()} m walked`;
       this.distanceTarget.textContent = '';
       this.distanceTarget.appendChild(value);
     }
