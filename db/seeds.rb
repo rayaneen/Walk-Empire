@@ -27,16 +27,21 @@ end
 puts "Creating Admin"
 User.create!(email: "user1@gmail.com", password:"secret", nickname: "No one", xp: 0)
 
+
+puts "Creating profile for DARK SASUKE 86!"
+User.create!(email: "user3@gmail.com", password:"secret", nickname: "D4RkSaSuKe86", xp: 666)
+puts "Finished creating users!"
+
 puts "Creating profile for DEMO!"
 User.create!(email: "user2@gmail.com", password:"secret", nickname: "Lucien", xp: 0)
 puts "Finished creating users!"
 
 puts "Creating Le Wagon Control Point"
 ControlPoint.create!(name: "Le Wagon", status:"Capturé", difficulty: 10,
-                     latitude: 44.859234165284, longitude: -0.5658168839146295, user: User.all.sample)
+                     latitude: 44.859234165284, longitude: -0.5658168839146295, user: User.find_by_nickname("D4RkSaSuKe86"))
 puts "Done!"
-puts "Creating Jardin Public Control Point"
 
+puts "Creating Jardin Public Control Point"
 ControlPoint.create!(name: "Jardin Public", status:"Capturé", difficulty: rand(1..1000),
                      latitude: 44.848207, longitude: -0.578130, user: User.all.sample)
 puts "Done!"
