@@ -37,7 +37,7 @@ User.create!(email: "user2@gmail.com", password:"secret", nickname: "Lucien", xp
 puts "Finished creating users!"
 
 puts "Creating Le Wagon Control Point"
-ControlPoint.create!(name: "Le Wagon", status:"Capturé", difficulty: 10,
+ControlPoint.create!(name: "Le Wagon", status:"Capturé", difficulty: 0,
                      latitude: 44.859234165284, longitude: -0.5658168839146295, user: User.find_by_nickname("D4RkSaSuKe86"))
 puts "Done!"
 
