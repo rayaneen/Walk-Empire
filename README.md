@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+[Walk-Empire](https://walk-empire.herokuapp.com/) is a rails app using Mapbox and Stimulus. 
+This project was done in 7 days
