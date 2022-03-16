@@ -33,7 +33,7 @@ User.create!(email: "user3@gmail.com", password:"secret", nickname: "D4RkSaSuKe8
 puts "Finished creating users!"
 
 puts "Creating profile for DEMO!"
-User.create!(email: "user2@gmail.com", password:"secret", nickname: "Lucien", xp: 0)
+User.create!(email: "user2@gmail.com", password:"secret", nickname: "Demo", xp: 0)
 puts "Finished creating users!"
 
 puts "Creating Le Wagon Control Point"
