@@ -42,7 +42,7 @@ ControlPoint.create!(name: "Le Wagon", status:"Capturé", difficulty: 10,
 puts "Done!"
 
 puts "Creating Jardin Public Control Point"
-ControlPoint.create!(name: "Jardin Public", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Jardin Public", status:"Capturé", difficulty: 0,
                      latitude: 44.848207, longitude: -0.578130, user: User.all.sample)
 puts "Done!"
 puts "Creating Jardin Public Control Point"
@@ -52,17 +52,17 @@ ControlPoint.create!(name: "iBoat", status:"Capturé", difficulty: rand(1..1000)
 puts "Done!"
 
 puts "Creating CAPC musée d'art contemporain de Bordeaux"
-ControlPoint.create!(name: "CAPC", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "CAPC", status:"Capturé", difficulty: 0,
                      latitude: 44.848627741310736, longitude: -0.5720502867787579, user: User.all.sample)
 puts "Done!"
 
 puts "Creating Eglise St Martial"
-ControlPoint.create!(name: "Eglise St Martial", status: "Capturé", difficulty: 10,
+ControlPoint.create!(name: "Eglise St Martial", status: "Capturé", difficulty: rand(1..1000),
                      latitude: 44.857989, longitude: -0.564852, user: User.all.sample)
 puts "Done!"
 
 puts "Creating Grand-Théâtre"
-ControlPoint.create!(name: "Grand-Théâtre", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Grand-Théâtre", status:"Capturé", difficulty: 0,
                      latitude: 44.84286968425403,  longitude: -0.5742652278749897, user: User.all.sample)
 puts "Done!"
 
@@ -72,7 +72,7 @@ ControlPoint.create!(name: "Place Gambetta", status:"Capturé", difficulty: rand
 puts "Done!"
 
 puts "Creating Place Saint Pierre"
-ControlPoint.create!(name: "Saint Pierre", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Saint Pierre", status:"Capturé", difficulty: 0,
                      latitude: 44.83988265214394, longitude: -0.5702004972994618, user: User.all.sample)
 puts "Done!"
 
@@ -82,7 +82,7 @@ ControlPoint.create!(name: "Porte Cailhau", status:"Capturé", difficulty: rand(
 puts "Done!"
 
 puts "Creating Place Grosse Cloche"
-ControlPoint.create!(name: "Grosse Cloche", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Grosse Cloche", status:"Capturé", difficulty: 0,
                      latitude: 44.835640992057314,  longitude: -0.5714149119064934, user: User.all.sample)
 puts "Done!"
 
@@ -93,7 +93,7 @@ puts "Done!"
 
 
 puts "Creating Halle des Chartrons"
-ControlPoint.create!(name: "Halle des Chartrons", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Halle des Chartrons", status:"Capturé", difficulty: 0,
                      latitude: 44.852854276346584,  longitude: -0.5722793444069948, user: User.all.sample)
 puts "Done!"
 
@@ -103,7 +103,7 @@ ControlPoint.create!(name: "Piscine du Grand Parc", status:"Capturé", difficult
 puts "Done!"
 
 puts "Creating France 3 Aquitaine"
-ControlPoint.create!(name: "France 3 Aquitaine", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "France 3 Aquitaine", status:"Capturé", difficulty: 0,
                      latitude: 44.85164063470125, longitude:  -0.591891860811593, user: User.all.sample)
 puts "Done!"
 
@@ -113,7 +113,7 @@ ControlPoint.create!(name: "Hotel de Police", status:"Capturé", difficulty: ran
 puts "Done!"
 
 puts "Piscine Judaique"
-ControlPoint.create!(name: "Piscine Judaique", status:"Capturé", difficulty: rand(1..1000),
+ControlPoint.create!(name: "Piscine Judaique", status:"Capturé", difficulty: 0,
                      latitude: 44.840753640010846, longitude:  -0.5909554514924478, user: User.all.sample)
 puts "Done!"
 
