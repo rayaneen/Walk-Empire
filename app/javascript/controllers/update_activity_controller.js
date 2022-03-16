@@ -17,7 +17,6 @@ export default class extends Controller {
 
     this.itinaryCoords = this.itinaryValue
     this.length = this.distanceValue || 0
-    this.itinaryCoords.push([-0.564462, 44.857597])
     this.beginItinary();
   }
   getPosition(data) {
